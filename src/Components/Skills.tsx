@@ -36,14 +36,14 @@ const CircularProgress = (tag: any, value: any) => {
   }, [value]);
 
   return (
-    <div className="col d-flex justify-content-center align-items-center ">
+    <div className=" d-flex justify-content-center align-items-center ">
       <div
         className="circular-progress"
         style={{
-          background: `conic-gradient(rgb(22, 37, 53) ${animatedValue * 3.6}deg, grey 0)`,
+          background:`conic-gradient(rgb(22, 37, 53) ${animatedValue * 3.6}deg, grey 0)`,
         }}
       >
-        <div className="inner-circle bg-warning ">
+        <div className="inner-circle ">
           <div className="percentage">{Math.round(animatedValue)}%</div>
           <div className="tag">{tag}</div>
         </div>

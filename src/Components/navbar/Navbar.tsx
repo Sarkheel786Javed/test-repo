@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
+import styles from './navbar.module.css'
 const pages = [
     {
         iconHome: "bi bi-house",
@@ -31,6 +31,7 @@ function Navbar() {
 
     return (
         <motion.div
+        className={`shadow ${styles.shadow}`}
             layout
             animate={{ opacity: 1 }}
             transition={{
@@ -38,12 +39,8 @@ function Navbar() {
                 layout: { duration: 0.3 },
             }}
         >
-            <div
-                className="mx-2 d-flex justify-content-start align-items-center shadow"
-                style={{ height: "50vh", borderRadius: "50px" }}
-            >
                 <div className="px-2">
-                    <ul className="p-0 order_list">
+                    <ul className={`p-0 ${styles.order_list}`}>
                         {pages.map((p, index) => (
                             <li
                                 key={index}
@@ -67,7 +64,6 @@ function Navbar() {
                         ))}
                     </ul>
                 </div>
-            </div>
         </motion.div>
     );
 }

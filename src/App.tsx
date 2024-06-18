@@ -1,6 +1,6 @@
 
 import Layout from './layout/Layout'
-import HomePage from './Components/HomePage'
+import HomePage from './Components/Homepage/HomePage'
 import Skills from './Components/Skills'
 import About from './Components/About'
 import Contact from './Components/Contact'

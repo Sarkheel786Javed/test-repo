@@ -1,0 +1,33 @@
+.layout_container{
+    position: relative;
+
+}
+
+.Children_Height{
+    min-height: 100vh;
+}
+.navbar_pages{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    top: 10vh;
+    right: 10px;
+    width: 50px;
+}
+@media (max-width: 767px) {
+    .navbar_pages{
+        height: 10vh;
+        top: 90vh;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

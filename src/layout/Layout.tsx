@@ -1,28 +1,25 @@
 import React, { ReactNode } from "react";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/navbar/Navbar";
 import { motion } from "framer-motion";
+import styles from './Homepage.module.css'
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
+    
     <div
-      className="d-flex justify-content-end align-items-center bg-dark  text-info"
-      style={{position: "relative" }}
-    >
-      <div className="w-100" style={{ height: "100%" }}>
-        <motion.div className="switch-container" layout layoutRoot>
+      className={styles.layout_container}>
+      <div className={styles.Children_Height} >
+        <div>
           <motion.div className="switch-handle" layout>
             {children}
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
-      <div
-        className=" d-flex justify-content-start align-items-center"
-        style={{ position: "fixed", zIndex: "1"  , top:"100px"}}
-      >
+      <div  className={styles.navbar_pages} >
         <Navbar />
       </div>
     </div>
