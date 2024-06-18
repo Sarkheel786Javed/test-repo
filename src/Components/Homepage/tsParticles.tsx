@@ -18,7 +18,7 @@ function TypeScriptParticles() {
         <div className="App">
             {init && (
                 <Particles
-                    options={particlesOptions as ISourceOptions}
+                options={particlesOptions as unknown as ISourceOptions}
                 />
             )}
         </div>
