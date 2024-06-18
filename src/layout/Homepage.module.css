@@ -7,7 +7,7 @@
     min-height: 100vh;
 }
 .navbar_pages{
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 100px;
     display: flex;
@@ -24,7 +24,7 @@
         top: 90vh;
         bottom: 0;
         width: 100%;
-        position: absolute;
+        position: fixed;
         z-index: 1;
         display: flex;
         justify-content: center;
