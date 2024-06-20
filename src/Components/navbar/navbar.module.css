@@ -1,5 +1,5 @@
 .shadow {
-    background-color: rgba(0, 0, 0, 0.308);
+    background-color: rgba(0, 0, 0, 0.74);
     border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -11,9 +11,13 @@
   align-items: center;
  
 }
+.navigation_links{
+  color: rgba(137, 43, 226, 0.651);
+  font-weight: 800;
+}
 @media (max-width: 767px) {
   .shadow {
-    background-color: rgba(0, 0, 0, 0.308);
+    background-color:rgba(0, 0, 0, 0.74);
     border-radius: 0px;
     width: 100%;
     display: flex;

@@ -1,0 +1,55 @@
+.layout_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  position: relative;
+}
+
+.Children_Height {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.navbar_pages {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  height: 100%;
+  width: 50px;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .navbar_pages {
+    display: block;
+    position: fixed;
+    top: calc(100vh - 70px);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar_pages {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar_pages {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar_pages {
+    display: block;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Navbar from "../Components/navbar/Navbar";
 import { motion } from "framer-motion";
-import styles from './Homepage.module.css'
+import styles from './Layout.module.css'
 import TypeScriptParticles from "../Components/Homepage/tsParticles";
 interface LayoutProps {
   children: ReactNode;

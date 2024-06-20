@@ -52,11 +52,11 @@ function Navbar() {
                                 <motion.div whileHover={{ scale: 1.2 }}>
                                     <Link
                                         to={p.path}
-                                        className="text-center text-decoration-none text-info"
+                                        className={`text-center text-decoration-none ${styles.navigation_links}`}
                                     >
-                                        <i className={`fs-1 text-info ${p.iconHome}`}></i>
+                                        <i className={`fs-1 ${styles.navigation_links} ${p.iconHome}`}></i>
                                         {hoveredIndex === index && (
-                                            <div style={{ fontSize: "8px" }}>{p.title}</div>
+                                            <div className={`${styles.navigation_links}`} style={{ fontSize: "8px" }}>{p.title}</div>
                                         )}
                                     </Link>
                                 </motion.div>
