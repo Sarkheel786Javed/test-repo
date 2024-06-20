@@ -34,20 +34,25 @@ const CircularProgress = (tag: any, value: any) => {
 
     requestAnimationFrame(animate);
   }, [value]);
-
   return (
-    <div className=" d-flex justify-content-center align-items-center ">
-      <div
+    <div className=" d-flex justify-content-center align-items-center">
+      <div className="">
+        <div
         className="circular-progress"
         style={{
-          background:`conic-gradient(rgb(22, 37, 53) ${animatedValue * 3.6}deg, grey 0)`,
+          background:`conic-gradient(wheat ${animatedValue * 3.6}deg, rgba(137, 43, 226, 0.541) 0)`,
         }}
       >
-        <div className="inner-circle ">
+        <div className="inner-circle bg-dark">
           <div className="percentage">{Math.round(animatedValue)}%</div>
           <div className="tag">{tag}</div>
         </div>
       </div>
+      <div className="w-100 text-center text-dark fw-bold fs-4">
+        {tag}
+      </div>
+      </div>
+      
     </div>
   );
 };

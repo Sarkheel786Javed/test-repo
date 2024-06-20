@@ -1,23 +1,8 @@
 import { motion } from "framer-motion";
 import styles from "./HomePage.module.css";
+import fadeIn from "../StyleFunctions/StylingFunctions";
 function HomePage() {
-  const fadeIn = (direction = "up", delay = 0) => {
-    return {
-      hidden: {
-        opacity: 0,
-        y: direction === "up" ? 50 : -50,
-      },
-      show: {
-        opacity: 1,
-        y: 0,
-        transition: {
-          delay: delay,
-          duration: 0.5,
-          ease: "easeInOut",
-        },
-      },
-    };
-  };
+
   return (
     <div>
       <div
@@ -64,21 +49,108 @@ function HomePage() {
                 className=" rounded-2"
                 aria-label="Slide 2"
               />
-              <button
+              {/* <button
                 type="button"
                 data-bs-target="#carouselExampleCaptions"
                 data-bs-slide-to={2}
                 style={{ height: "20px", width: "20px" }}
                 className=" rounded-2"
                 aria-label="Slide 3"
-              />
+              /> */}
             </div>
             <div className="carousel-inner">
-              <div className="carousel-item active" style={{ height: "80vh" }}>
+              <div className="carousel-item active" style={{ height: "90vh" }}>
                 <div
                   className={`d-flex justify-content-center align-items-center h-100 ${styles.header_content}`}
                 >
-                  <div className="w-100 p-5">
+                  <div className="w-100 p-2">
+                    <div className={`${styles.slider_cover}`}>
+                      <div className={` ${styles.Content_Side}`}>
+                        <div className="w-100">
+                          <h1 className="text-light fw-bold text-light">
+                            I'm
+                            <span className="text-warning mx-2">
+                              <br />
+                              Sarkheel Javed
+                              <br />
+                            </span>
+                            Mernstack
+                            <br />
+                            Developer
+                          </h1>
+                          <p>
+                            <div className="d-flex flex-wrap justify-content-start align-items-center gap-3">
+                              <button
+                                className={`mt-2 mb-0 cursor-pointer ${styles.hire_button}`}
+                              >
+                                HIRE ME
+                              </button>
+                              <button
+                                className={`mt-2 mb-0 btn btn-outline-dark text-light cursor-pointer ${styles.my_work}`}
+                              >
+                                My Works
+                              </button>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                      <div className={`${styles.background_Image}`}>
+                        <div>
+                          <img src="./my_img.png" alt="..." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="carousel-item" style={{ height: "90vh" }}>
+                <div
+                  className={`d-flex justify-content-center align-items-center h-100 ${styles.header_content}`}
+                >
+                  <div className="w-100 p-2">
+                    <div className={`${styles.slider_cover}`}>
+                      <div className={` ${styles.Content_Side}`}>
+                        <div className="w-100">
+                          <h1 className="text-light fw-bold text-light">
+                            I'm a
+                            <span className="text-warning mx-2">
+                              web
+                              <br />
+                              Developer & Designer
+                              <br />
+                            </span>
+                            based in Pakistan
+                          </h1>
+                          <p>
+                            <div className="d-flex flex-wrap justify-content-start align-items-center gap-3">
+                              <button
+                                className={`mt-2 mb-0 cursor-pointer ${styles.hire_button}`}
+                              >
+                                HIRE ME
+                              </button>
+                              <button
+                                className={`mt-2 mb-0 btn btn-outline-dark text-light cursor-pointer ${styles.my_work}`}
+                              >
+                                My Works
+                              </button>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                      <div className={`${styles.background_Image}`}>
+                        <div>
+                          <img src="./my_img.png" alt="..." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="carousel-item" style={{ height: "90vh" }}>
+                <div
+                  className={`d-flex justify-content-center align-items-center h-100 ${styles.header_content}`}
+                >
+                  <div className="w-100 p-2">
                     <div className="container-fluid">
                       <div className="row">
                         <div className="col-6">
@@ -95,13 +167,13 @@ function HomePage() {
                               Pakistan
                           </h1>
                           <p>
-                            <div className="d-flex flex-wrap justify-content-start align-items-center gap-5">
-                              <button className="mt-3 btn btn-warning text-light cursor-pointer">
+                            <div className="d-flex flex-wrap justify-content-start align-items-center gap-3">
+                              <button className={`mt-2 mb-0 cursor-pointer ${styles.hire_button}`}>
                                 HIRE ME
                                 </button>
-                              <button className="mt-3 btn btn-outline-dark text-light cursor-pointer">
+                              <button className={`mt-3 btn btn-outline-dark text-light cursor-pointer ${styles.my_work}`}>
                                 My Works
-                                </button>
+                                mt-2 mb-0tton>
                                 </div>
                           </p>
                         </div>
@@ -109,79 +181,7 @@ function HomePage() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="carousel-item" style={{ height: "80vh" }}>
-                <div
-                  className={`d-flex justify-content-center align-items-center h-100 ${styles.header_content}`}
-                >
-                  <div className="w-100 p-5">
-                    <div className="container-fluid">
-                      <div className="row">
-                        <div className="col-6">
-                          <h1 className="text-light fw-bold text-light">
-                            I'm a 
-                            <span className="text-warning mx-2">
-                              web 
-                              <br/>
-                              Developer & Designer
-                              <br/>
-                              </span> 
-                              based 
-                              in
-                              Pakistan
-                          </h1>
-                          <p>
-                            <div className="d-flex flex-wrap justify-content-start align-items-center gap-5">
-                              <button className="mt-3 btn btn-warning text-light cursor-pointer">
-                                HIRE ME
-                                </button>
-                              <button className="mt-3 btn btn-outline-dark text-light cursor-pointer">
-                                My Works
-                                </button>
-                                </div>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="carousel-item" style={{ height: "80vh" }}>
-                <div
-                  className={`d-flex justify-content-center align-items-center h-100 ${styles.header_content}`}
-                >
-                  <div className="w-100 p-5">
-                    <div className="container-fluid">
-                      <div className="row">
-                        <div className="col-6">
-                          <h1 className="text-light fw-bold text-light">
-                            I'm a 
-                            <span className="text-warning mx-2">
-                              web 
-                              <br/>
-                              Developer & Designer
-                              <br/>
-                              </span> 
-                              based 
-                              in
-                              Pakistan
-                          </h1>
-                          <p>
-                            <div className="d-flex flex-wrap justify-content-start align-items-center gap-5">
-                              <button className="mt-3 btn btn-warning text-light cursor-pointer">
-                                HIRE ME
-                                </button>
-                              <button className="mt-3 btn btn-outline-dark text-light cursor-pointer">
-                                My Works
-                                </button>
-                                </div>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </div> */}
             </div>
             {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true" />
