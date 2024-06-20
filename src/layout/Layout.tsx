@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
 
     <div
-      className={styles.layout_container}>
+      className={` ${styles.layout_container}`}>
       <TypeScriptParticles />
 
       <div className={styles.Children_Height} >

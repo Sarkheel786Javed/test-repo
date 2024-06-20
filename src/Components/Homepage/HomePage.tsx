@@ -23,7 +23,7 @@ function HomePage() {
         animate="show"
         exit="hidden"
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="w-100 h-100 position-absolute"
+        className="w-100 h-100 position-absolute pb-5"
       >
         <div className="">
           <div
@@ -193,7 +193,35 @@ function HomePage() {
   </button> */}
           </div>
         </div>
+         <div className={`my-5 ${styles.bg}`}>
+          <img src="/Website Building of Shopping Sale.gif" 
+          alt="...h" 
+          width="100%" 
+          height="100%" 
+          style={{
+            position:"absolute",
+            objectFit:"cover",
+            opacity:"0.5",
+            zIndex:"-1"}}
+          />
+          <div className="d-flex flex-wrap justify-content-start align-items-center">
+            <span className="d-block text-center text-light" style={{width:"200px"}}>
+            <img src="/images/languages/Html 5 (1).gif" 
+          alt="...h" 
+          width="100%" 
+          height="100%" 
+          style={{
+            objectFit:"cover",
+            zIndex:"10"}}
+          />
+          <h5 className="">
+            HTML
+          </h5>
+            </span>
+          </div>
+         </div>
       </motion.div>
+     
     </div>
   );
 }
