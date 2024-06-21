@@ -1,31 +1,20 @@
 import { motion } from "framer-motion";
 import styles from "./HomePage.module.css";
 import fadeIn from "../StyleFunctions/StylingFunctions";
+import Services from '../Services/JobServices.tsx'
+import MYProjects from '../Services/MYProjects'
 function HomePage() {
-
   return (
     <div>
-      <div
-        className="w-100 h-100 position-absolute"
-        style={{
-          backgroundImage: "url('/Frame 1.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "right",
-          backgroundRepeat: "no-repeat",
-          backgroundBlendMode: "color-dodge",
-          transform: "translateZ(0)",
-        }}
-      ></div>
-
       <motion.div
         variants={fadeIn("up", 0.5)}
         initial="hidden"
         animate="show"
         exit="hidden"
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="w-100 h-100 position-absolute pb-5"
+        className="w-100 h-100  pb-5"
       >
-        <div className="">
+        <div className={styles.contents_header}>
           <div
             id="carouselExampleCaptions"
             className="carousel slide"
@@ -193,35 +182,19 @@ function HomePage() {
   </button> */}
           </div>
         </div>
-         <div className={`my-5 ${styles.bg}`}>
-          <img src="/Website Building of Shopping Sale.gif" 
-          alt="...h" 
-          width="100%" 
-          height="100%" 
-          style={{
-            position:"absolute",
-            objectFit:"cover",
-            opacity:"0.5",
-            zIndex:"-1"}}
-          />
-          <div className="d-flex flex-wrap justify-content-start align-items-center">
-            <span className="d-block text-center text-light" style={{width:"200px"}}>
-            <img src="/images/languages/Html 5 (1).gif" 
-          alt="...h" 
-          width="100%" 
-          height="100%" 
-          style={{
-            objectFit:"cover",
-            zIndex:"10"}}
-          />
-          <h5 className="">
-            HTML
-          </h5>
-            </span>
+        <div className={`my-5 ${styles.bg}`}>
+          <div className="text-center">
+            <label className="text-light fw-bold fs-1 mt-3 border-bottom w-auto">Services</label>
+            <Services/>
           </div>
-         </div>
+        </div>
       </motion.div>
-     
+      <div className={`my-5 `}>
+          <div className="text-center">
+            <label className="text-light fw-bold fs-1 mt-3 border-bottom w-auto">Projects</label>
+            <MYProjects/>
+          </div>
+        </div>
     </div>
   );
 }

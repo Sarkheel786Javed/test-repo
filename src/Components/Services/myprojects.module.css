@@ -1,0 +1,10 @@
+.container_background{
+    background-image: url(/5467426_1720.jpg);
+    height: 80vh;
+    margin: 0;
+    background-size: cover;
+    /* for fixx background image  */
+    background-attachment: fixed;
+    background-position: center top;
+    opacity: .4;
+}

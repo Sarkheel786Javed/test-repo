@@ -1,6 +1,12 @@
-.header_content {
-  background-color: rgba(137, 43, 226, 0.541);
+/* .header_content {
+  background: linear-gradient(to top, rgba(250, 185, 5, 0.5), rgba(2, 3, 63, 0.3)),
+  linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 0, 221, 0.5));
+  opacity: .3;
 }
+.contents_header{
+ 
+
+} */
 .hire_button {
  
     height: 40px;
@@ -29,6 +35,7 @@
   width:150px;
 }
 .slider_cover {
+  backdrop-filter: saturate(180%) blur(10px);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -61,8 +68,13 @@
   }
 }
 .bg{
-  position: relative;
-  height: 80vh;
+  background:  linear-gradient(rgba(250, 95, 5, 0.5), rgba(2, 3, 63, 0.3));
+  /* background-image: url("/Website Building of Shopping Sale.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; */
+  height: 400px;
   width: 100%;
   border-radius: 20px;
 }

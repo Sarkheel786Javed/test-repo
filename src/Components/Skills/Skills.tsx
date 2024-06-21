@@ -48,7 +48,7 @@ const CircularProgress = (tag: any, value: any) => {
           <div className="tag">{tag}</div>
         </div>
       </div>
-      <div className="w-100 text-center text-dark fw-bold fs-4">
+      <div className="w-100 text-center text-light fw-bold fs-4">
         {tag}
       </div>
       </div>
@@ -59,10 +59,11 @@ const CircularProgress = (tag: any, value: any) => {
 
 const Skills = () => {
   return (
-    <div className="container-fluid">
+    <div className="">
+     <div className="container-fluid">
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 d-flex justify-content-center align-items-center p-2">
-          <h1 className="mt-3"> My Skills</h1>
+          <h1 className="mt-3 text-light"> My Skills</h1>
         </div>
         {skills.map((data) => (
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center align-items-center p-2">
@@ -72,6 +73,8 @@ const Skills = () => {
         ))}
       </div>
     </div>
+    </div>
+   
   );
 };
 
