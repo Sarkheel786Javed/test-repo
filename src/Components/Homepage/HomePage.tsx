@@ -182,13 +182,14 @@ function HomePage() {
   </button> */}
           </div>
         </div>
-        <div className={`my-5 ${styles.bg}`}>
+        
+      </motion.div>
+      <div className={`my-5 ${styles.bg}`}>
           <div className="text-center">
             <label className="text-light fw-bold fs-1 mt-3 border-bottom w-auto">Services</label>
             <Services/>
           </div>
         </div>
-      </motion.div>
       <div className={`my-5 `}>
           <div className="text-center">
             <MYProjects/>
