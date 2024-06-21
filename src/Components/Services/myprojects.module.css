@@ -1,10 +1,14 @@
 .container_background{
     background-image: url(/5467426_1720.jpg);
-    height: 80vh;
+    height: auto;
     margin: 0;
     background-size: cover;
     /* for fixx background image  */
     background-attachment: fixed;
     background-position: center top;
-    opacity: .4;
+    border-radius: 50px;
+    filter: brightness(50%);
+}
+.content_project{
+    backdrop-filter: saturate(180%) blur(3px);
 }

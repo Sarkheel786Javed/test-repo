@@ -85,7 +85,7 @@ function HomePage() {
                       </div>
                       <div className={`${styles.background_Image}`}>
                         <div>
-                          <img src="./my_img.png" alt="..." />
+                          <img src="/images/file (3).png" alt="..." />
                         </div>
                       </div>
                     </div>
@@ -128,7 +128,7 @@ function HomePage() {
                       </div>
                       <div className={`${styles.background_Image}`}>
                         <div>
-                          <img src="./my_img.png" alt="..." />
+                          <img src="/images/file (3).png" alt="..." />
                         </div>
                       </div>
                     </div>
@@ -191,7 +191,6 @@ function HomePage() {
       </motion.div>
       <div className={`my-5 `}>
           <div className="text-center">
-            <label className="text-light fw-bold fs-1 mt-3 border-bottom w-auto">Projects</label>
             <MYProjects/>
           </div>
         </div>
