@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styles from "./HomePage.module.css";
 import fadeIn from "../StyleFunctions/StylingFunctions";
 import Services from '../Services/JobServices.tsx'
-import MYProjects from '../Services/MYProjects'
+import MYProjects from '../MyProjects/MYProjects.tsx'
 function HomePage() {
   return (
     <div>
@@ -85,7 +85,7 @@ function HomePage() {
                       </div>
                       <div className={`${styles.background_Image}`}>
                         <div>
-                          <img src="/images/file (3).png" alt="..." />
+                          <img src="/my_img.png" alt="..." />
                         </div>
                       </div>
                     </div>
@@ -128,7 +128,7 @@ function HomePage() {
                       </div>
                       <div className={`${styles.background_Image}`}>
                         <div>
-                          <img src="/images/file (3).png" alt="..." />
+                          <img src="/my_img.png" alt="..." />
                         </div>
                       </div>
                     </div>
