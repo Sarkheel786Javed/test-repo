@@ -7,9 +7,9 @@
 }
 
 .Children_Height {
-  display: flex;
+  /* display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: center; */
   position: relative;
   width: 100%;
 }

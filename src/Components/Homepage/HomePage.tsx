@@ -83,8 +83,8 @@ function HomePage() {
                           </p>
                         </div>
                       </div>
-                      <div className={`${styles.background_Image}`}>
-                        <div>
+                      <div className={`w-100 d-flex justify-content-end align-items-center`}>
+                        <div className={`d-flex justify-content-center align-items-start ${styles.background_img_cover}`}>
                           <img src="/my_img.png" alt="..." />
                         </div>
                       </div>
@@ -126,8 +126,8 @@ function HomePage() {
                           </p>
                         </div>
                       </div>
-                      <div className={`${styles.background_Image}`}>
-                        <div>
+                      <div className={`w-100 d-flex justify-content-end align-items-center`}>
+                        <div className={`d-flex justify-content-center align-items-start ${styles.background_img_cover}`}>
                           <img src="/my_img.png" alt="..." />
                         </div>
                       </div>
@@ -182,19 +182,19 @@ function HomePage() {
   </button> */}
           </div>
         </div>
-        
+
       </motion.div>
       <div className={`my-5 ${styles.bg}`}>
-          <div className="text-center">
-            <label className="text-light fw-bold fs-1 mt-3 border-bottom w-auto">Services</label>
-            <Services/>
-          </div>
+        <div className="text-center">
+          <label className="text-light fw-bold fs-1 mt-3 border-bottom w-auto">Services</label>
+          <Services />
         </div>
+      </div>
       <div className={`my-5 `}>
-          <div className="text-center">
-            <MYProjects/>
-          </div>
+        <div className="text-center">
+          <MYProjects />
         </div>
+      </div>
     </div>
   );
 }

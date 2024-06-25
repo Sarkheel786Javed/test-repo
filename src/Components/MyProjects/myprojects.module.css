@@ -13,10 +13,3 @@
 .content_project{
     backdrop-filter: saturate(180%) blur(3px);
 }
-.project_img{
-transition: 0.5s ease-in-out;
-box-shadow: rgba(255, 1, 1, 0.521) 0px 19px 38px, rgba(196, 29, 29, 0.918) 0px 15px 12px;
-}
-.project_img:hover{
-    margin-top: -20px;
-}
