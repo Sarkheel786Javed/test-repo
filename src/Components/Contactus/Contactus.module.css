@@ -1,4 +1,52 @@
-.cover_of_form{
-    height: 200px;
-    background-color: rgb(225, 2, 2);
+.cover_of_form {
+  display: flex;
+  justify-content: center;
+}
+.Content_style_background_color {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.content_side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_side {
+  width: 50%;
+  background-color: rgba(82, 45, 100, 0.328);
+  box-shadow: rgba(97, 60, 115, 0.839) 0px 1px 3px,
+    rgba(97, 60, 115, 0.839) 0px 1px 2px;
+}
+.Headings {
+  font-size: 60px;
+}
+.Client_reviews {
+  background-color: rgba(97, 60, 115, 0.839);
+  border-radius: 10px;
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .content_side {
+    display: none;
+  }
+  .Content_style_background_color {
+    background-color: rgba(168, 4, 250, 0.333);
+    border-radius: 50px;
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form_side {
+    width: 90%;
+    border-radius: 50px;
+    background-color: rgba(82, 45, 100, 0.328);
+    box-shadow: rgba(97, 60, 115, 0.839) 0px 1px 3px,
+      rgba(97, 60, 115, 0.839) 0px 1px 2px;
+  }
 }
