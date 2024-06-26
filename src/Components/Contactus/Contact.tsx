@@ -1,25 +1,47 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from "./Contactus.module.css";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
-  const form = useRef<any>();
+  interface handleValuesFromselect {
+    name: string;
+    phone: string;
+    email: string;
+    message: string;
+  }
+
+  const [handleValuesFromselect, setHandleValuesFromselect] =
+    useState<handleValuesFromselect>({
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+    });
+
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_gnyz3lx", "template_wrvliba", form.current, {
-        publicKey: "KHpgBlKP0zbLgARz4",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm("service_gnyz3lx", "template_wrvliba", form.current, "KHpgBlKP0zbLgARz4")
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            // Clear the form fields
+            setHandleValuesFromselect({
+              name: "",
+              phone: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    }
   };
 
   return (
@@ -75,7 +97,7 @@ function Contact() {
             maintenance We are the some preferred.
           </p>
 
-          <form ref={form} onSubmit={(e) => sendEmail(e)}>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Name
@@ -83,8 +105,13 @@ function Contact() {
               <input
                 type="text"
                 className="form-control"
-                id="name"
-                name="name"
+                value={handleValuesFromselect.name}
+                onChange={(e) =>
+                  setHandleValuesFromselect((prevState) => ({
+                    ...prevState,
+                    name: e.target.value,
+                  }))
+                }
                 placeholder="Name"
               />
             </div>
@@ -95,8 +122,13 @@ function Contact() {
               <input
                 type="text"
                 className="form-control"
-                id="phone"
-                name="phone"
+                value={handleValuesFromselect.phone}
+                onChange={(e) =>
+                  setHandleValuesFromselect((prevState) => ({
+                    ...prevState,
+                    phone: e.target.value,
+                  }))
+                }
                 placeholder="Phone Number"
               />
             </div>
@@ -107,8 +139,13 @@ function Contact() {
               <input
                 type="email"
                 className="form-control"
-                id="email"
-                name="email"
+                value={handleValuesFromselect.email}
+                onChange={(e) =>
+                  setHandleValuesFromselect((prevState) => ({
+                    ...prevState,
+                    email: e.target.value,
+                  }))
+                }
                 placeholder="name@example.com"
               />
             </div>
@@ -118,13 +155,21 @@ function Contact() {
               </label>
               <textarea
                 className="form-control"
-                id="message"
-                name="message"
+                value={handleValuesFromselect.message}
+                onChange={(e) =>
+                  setHandleValuesFromselect((prevState) => ({
+                    ...prevState,
+                    message: e.target.value,
+                  }))
+                }
                 placeholder="Message"
                 rows={3}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button
+              type="submit"
+              className="btn btn-primary"
+            >
               Submit
             </button>
           </form>
