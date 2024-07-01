@@ -1,47 +1,26 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import styles from "./Contactus.module.css";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
-  interface handleValuesFromselect {
-    name: string;
-    phone: string;
-    email: string;
-    message: string;
-  }
-
-  const [handleValuesFromselect, setHandleValuesFromselect] =
-    useState<handleValuesFromselect>({
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
-    });
-
-  const form = useRef<HTMLFormElement>(null);
+  const form = useRef<any>();
 
   const sendEmail = (e: any) => {
     e.preventDefault();
+    console.log("form.current-==========>", form.current)
 
-    if (form.current) {
-      emailjs
-        .sendForm("service_gnyz3lx", "template_wrvliba", form.current, "KHpgBlKP0zbLgARz4")
-        .then(
-          () => {
-            console.log("SUCCESS!");
-            // Clear the form fields
-            setHandleValuesFromselect({
-              name: "",
-              phone: "",
-              email: "",
-              message: "",
-            });
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-          }
-        );
-    }
+    emailjs
+      .sendForm("service_ilzimze", "template_6r9nsqb", form.current, {
+        publicKey: "KHpgBlKP0zbLgARz4",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
@@ -96,22 +75,15 @@ function Contact() {
             For your car we will do everything advice design in us repairs and
             maintenance We are the some preferred.
           </p>
-
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} onSubmit={sendEmail} >
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Name
               </label>
               <input
+              name="from_name"
                 type="text"
                 className="form-control"
-                value={handleValuesFromselect.name}
-                onChange={(e) =>
-                  setHandleValuesFromselect((prevState) => ({
-                    ...prevState,
-                    name: e.target.value,
-                  }))
-                }
                 placeholder="Name"
               />
             </div>
@@ -120,15 +92,9 @@ function Contact() {
                 Phone
               </label>
               <input
+              name="from_phone"
                 type="text"
                 className="form-control"
-                value={handleValuesFromselect.phone}
-                onChange={(e) =>
-                  setHandleValuesFromselect((prevState) => ({
-                    ...prevState,
-                    phone: e.target.value,
-                  }))
-                }
                 placeholder="Phone Number"
               />
             </div>
@@ -137,15 +103,9 @@ function Contact() {
                 Email address
               </label>
               <input
+              name="from_email"
                 type="email"
                 className="form-control"
-                value={handleValuesFromselect.email}
-                onChange={(e) =>
-                  setHandleValuesFromselect((prevState) => ({
-                    ...prevState,
-                    email: e.target.value,
-                  }))
-                }
                 placeholder="name@example.com"
               />
             </div>
@@ -154,25 +114,17 @@ function Contact() {
                 Message
               </label>
               <textarea
+               name="from_message"
                 className="form-control"
-                value={handleValuesFromselect.message}
-                onChange={(e) =>
-                  setHandleValuesFromselect((prevState) => ({
-                    ...prevState,
-                    message: e.target.value,
-                  }))
-                }
                 placeholder="Message"
                 rows={3}
               />
             </div>
-            <button
-              type="submit"
-              className="btn btn-primary"
-            >
-              Submit
-            </button>
+            <div className="mb-3">
+            <input type="submit" value="Send"/>
+            </div>
           </form>
+
         </div>
       </div>
     </div>
