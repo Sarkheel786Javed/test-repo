@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import styles from "./HomePage.module.css";
 import fadeIn from "../StyleFunctions/StylingFunctions";
-import Services from '../Services/JobServices.tsx'
-import MYProjects from '../MyProjects/MYProjects.tsx'
+import Services from "../Services/JobServices.tsx";
+import MYProjects from "../MyProjects/MYProjects.tsx";
+import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <div>
@@ -69,11 +70,13 @@ function HomePage() {
                           </h1>
                           <p>
                             <div className="d-flex flex-wrap justify-content-start align-items-center gap-3">
-                              <button
-                                className={`mt-2 mb-0 cursor-pointer ${styles.hire_button}`}
-                              >
-                                HIRE ME
-                              </button>
+                              <Link to="/contact-us" className="text-decoration-none">
+                                <button
+                                  className={`mt-2 mb-0 cursor-pointer ${styles.hire_button}`}
+                                >
+                                  HIRE ME
+                                </button>
+                              </Link>
                               <button
                                 className={`mt-2 mb-0 btn btn-outline-dark text-light cursor-pointer ${styles.my_work}`}
                               >
@@ -83,8 +86,12 @@ function HomePage() {
                           </p>
                         </div>
                       </div>
-                      <div className={`w-100 d-flex justify-content-end align-items-center`}>
-                        <div className={`d-flex justify-content-center align-items-start ${styles.background_img_cover}`}>
+                      <div
+                        className={`w-100 d-flex justify-content-end align-items-center`}
+                      >
+                        <div
+                          className={`d-flex justify-content-center align-items-start ${styles.background_img_cover}`}
+                        >
                           <img src="/my_img.png" alt="..." />
                         </div>
                       </div>
@@ -112,11 +119,13 @@ function HomePage() {
                           </h1>
                           <p>
                             <div className="d-flex flex-wrap justify-content-start align-items-center gap-3">
-                              <button
-                                className={`mt-2 mb-0 cursor-pointer ${styles.hire_button}`}
-                              >
-                                HIRE ME
-                              </button>
+                              <Link to="/contact-us">
+                                <button
+                                  className={`mt-2 mb-0 cursor-pointer ${styles.hire_button}`}
+                                >
+                                  HIRE ME
+                                </button>
+                              </Link>
                               <button
                                 className={`mt-2 mb-0 btn btn-outline-dark text-light cursor-pointer ${styles.my_work}`}
                               >
@@ -126,8 +135,12 @@ function HomePage() {
                           </p>
                         </div>
                       </div>
-                      <div className={`w-100 d-flex justify-content-end align-items-center`}>
-                        <div className={`d-flex justify-content-center align-items-start ${styles.background_img_cover}`}>
+                      <div
+                        className={`w-100 d-flex justify-content-end align-items-center`}
+                      >
+                        <div
+                          className={`d-flex justify-content-center align-items-start ${styles.background_img_cover}`}
+                        >
                           <img src="/my_img.png" alt="..." />
                         </div>
                       </div>
@@ -182,11 +195,12 @@ function HomePage() {
   </button> */}
           </div>
         </div>
-
       </motion.div>
       <div className={`my-5 ${styles.bg}`}>
         <div className="text-center">
-          <label className="text-light fw-bold fs-1 mt-3 border-bottom w-auto">Services</label>
+          <label className="text-light fw-bold fs-1 mt-3 border-bottom w-auto">
+            Services
+          </label>
           <Services />
         </div>
       </div>
