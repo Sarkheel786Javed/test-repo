@@ -1,15 +1,52 @@
-.container_background{
-    background-color: rgba(0, 0, 0, 0.637);
-    background-image: url(/images/TV1.png);
-    height: auto;
-    margin: 0;
-    background-size: cover;
-    /* for fixx background image  */
-    background-attachment: fixed;
-    background-position: center top;
-    border-radius: 50px;
-    filter: brightness(50%);
+.container_background {
+  background-color: rgba(0, 0, 0, 0.637);
+  background-image: url(/images/TV1.png);
+  height: auto;
+  margin: 0;
+  background-size: cover;
+  /* for fixx background image  */
+  background-attachment: fixed;
+  background-position: center top;
+  border-radius: 50px;
+  filter: brightness(50%);
 }
-.content_project{
-    backdrop-filter: saturate(180%) blur(3px);
+.content_project {
+  backdrop-filter: saturate(180%) blur(3px);
+}
+.text {
+  margin: 0;
+  font-family: "Teko", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  animation: glow 1s ease-in-out infinite alternate;
+  text-align: start;
+}
+
+.home_Link {
+  text-decoration: none;
+  font-family: "Teko", sans-serif;
+  color: #9b4dbc;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+  padding-bottom: 1rem;
+}
+.home_Link:hover {
+  color: #9b4dbc;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #9b4dbc;
+  }
+  to {
+    text-shadow: 0 0 30px #9b4dbc, 0 0 10px #9b4dbc;
+  }
+}
+.project_name {
+  height: 180px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: rgb(255, 255, 255);
 }
