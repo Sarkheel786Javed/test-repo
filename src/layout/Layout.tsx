@@ -89,7 +89,9 @@ const CursorCircle = () => {
   return (
     <>
       <div style={circleStyle.circle} />
-      {hoveredElementName && <div style={circleStyle.text}>{hoveredElementName}</div>}
+      {hoveredElementName && <div style={circleStyle.text}>
+        {/* {hoveredElementName} */}
+        </div>}
     </>
   )
 };
