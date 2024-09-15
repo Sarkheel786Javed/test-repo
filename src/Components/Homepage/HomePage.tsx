@@ -92,7 +92,7 @@ function HomePage() {
                         <div
                           className={`d-flex justify-content-center align-items-start ${styles.background_img_cover}`}
                         >
-                          <img src="/my_img.png" alt="..." />
+                          <img src="images/office.jfif" alt="..." />
                         </div>
                       </div>
                     </div>
@@ -141,7 +141,7 @@ function HomePage() {
                         <div
                           className={`d-flex justify-content-center align-items-start ${styles.background_img_cover}`}
                         >
-                          <img src="/my_img.png" alt="..." />
+                          <img src="images/office.jfif" alt="..." />
                         </div>
                       </div>
                     </div>

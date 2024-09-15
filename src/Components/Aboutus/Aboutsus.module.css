@@ -1,0 +1,24 @@
+.Aboutus_cover {
+    background-color: rgba(168, 4, 250, 0.171);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: sstart;
+}
+
+.button_active {
+    padding: 10px 50px;
+    background-color: rgba(168, 4, 250, 0.398);
+}
+
+.button_Not_active {
+    padding: 10px 50px;
+    background-color: rgba(168, 4, 250, 0.17);
+}
+.text_align{
+    text-align: justify;
+}
