@@ -9,8 +9,6 @@ function About() {
   const handleSectionsTabs = (tab: any) => {
     setTab(tab)
   }
-
-  let text = "Sarkheel, Javed"
   return (
     <div className="w-100 p-4">
       <div className={`p-5 ${styles.Aboutus_cover}`}>
