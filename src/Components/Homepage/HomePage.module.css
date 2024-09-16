@@ -60,7 +60,15 @@ height: 350px;
 object-fit: cover;
 border-radius: 100px;
 }
+.imgSections{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 @media (max-width: 767px) {
+  .imgSections{
+    display: none;
+  }
   .background_img_cover{
     display: none;
     width: 0px;
@@ -74,8 +82,9 @@ border-radius: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: self-start;
+    align-items: start;
   }
+  
 }
 .bg{
   background:  linear-gradient(rgba(250, 95, 5, 0.815), rgba(2, 3, 63, 0));
