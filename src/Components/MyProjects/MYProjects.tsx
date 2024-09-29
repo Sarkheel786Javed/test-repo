@@ -4,9 +4,9 @@ import { useState } from "react";
 function MYProjects() {
   const Project_List = [
     {
-      image: "/5467426_1720.jpg",
-      name: "Project 1",
-      link:"/"
+      image: "Projects/Kodware.PNG",
+      name: "Our Kodware company Website ",
+      link:"https://sarkheel786javed.github.io/Kodware_Repo/"
     },
     {
       image: "/10276612_4421964.jpg",
@@ -55,23 +55,22 @@ function MYProjects() {
           <div className="border container-fluid mt-3">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12 p-2 d-flex justify-content-center">
-                <div className="w-100 d-sm-block d-lg-flex justify-content-satrt">
-                  <div className="w-50">
+                <div className="w-100 d-flex flex-wrap justify-content-satrt">
+                  <div className={`${styles.image_section}`}>
                     <img
                       src={`${img}`}
                       alt="..."
                       width="100%"
-                      height="220px"
                     />
                   </div>
-                  <div className="w-50 ">
-                    <div className="d-flex justify-content-between align-items-center">
+                  <div className={`${styles.image_Project_Links}`}>
+                    <div className="d-flex flex-wrap justify-content-between align-items-center">
                        <h3 className={` ${styles.text}`}>
                       <Link to="/" className={`mx-2 ${styles.home_Link}`}>
                         Portfolio
                       </Link>
                     </h3>
-                    <label className="text-light">Total:{Project_List.length}</label>
+                    <h6 className="text-light text-end">Total:{Project_List.length}</h6>
                     </div>
                    
                     <section className={`mx-2 text-start ${styles.project_name}`} >

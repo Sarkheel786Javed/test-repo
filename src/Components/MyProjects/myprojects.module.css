@@ -1,6 +1,6 @@
 .container_background {
   background-color: rgba(0, 0, 0, 0.637);
-  background-image: url(/images/TV1.png);
+  /* background-image: url(/images/TV1.png); */
   height: auto;
   margin: 0;
   background-size: cover;
@@ -8,11 +8,11 @@
   background-attachment: fixed;
   background-position: center top;
   border-radius: 50px;
-  filter: brightness(50%);
+  /* filter: brightness(50%); */
 }
-.content_project {
+/* .content_project {
   backdrop-filter: saturate(180%) blur(3px);
-}
+} */
 .text {
   margin: 0;
   font-family: "Teko", sans-serif;
@@ -46,7 +46,22 @@
 .project_name {
   height: 180px;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   color: rgb(255, 255, 255);
+}
+.image_section{
+  width: 50%;
+}
+.image_Project_Links{
+width: 50%;
+}
+
+@media (max-width: 767px) {
+  .image_section{
+    width: 100%;
+  }
+  .image_Project_Links{
+  width: 100%;
+  }
 }
